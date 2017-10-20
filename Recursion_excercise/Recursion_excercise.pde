@@ -11,13 +11,13 @@ void draw() {
   branch(width/2, height, 400);
 }
 
-void branch(float x, float y, float h)  {
+void branch(float x, float y, float h) {
   //Initial positions of lines
- line(x, y, x - h, y - h);  
- line(x, y, x + h, y - h); 
- if (h > 1)  {
-   //Now the recursive call pattern
-   branch(x - h, y - h, h/2);
-   branch(x + h, y - h, h/2);
- }
+  line(x, y, x - h, y - h);  
+  line(x, y, x + h, y - h); 
+  if (h > 1) {
+    //Now the recursive call pattern
+    branch(x - h, y - h, h/2);
+    branch(x + h, y - h, h/2);
+  }
 }
